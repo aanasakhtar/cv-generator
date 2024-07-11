@@ -56,12 +56,39 @@ button {
 }
 
 .cv-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
   margin: 10px;
   margin-right: 40px;
-  width: 400px;
   background-color: white;
   flex: 1;
 }
+
+.edu-container,.xp-container, .xp, .edu, .personal-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 10px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.personal-container {
+  justify-content: flex-start;
+}
+
+hr {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-style: inset;
+  border-width: 1px;
+  background-color: #FF5733;
+}
+
 
 @keyframes logo-spin {
   from {
