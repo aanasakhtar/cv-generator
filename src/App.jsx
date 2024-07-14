@@ -42,19 +42,22 @@ function App() {
     }));
   }
 
-  function addNewEducation() {
+  function addNewEducation(e) {
+    e.preventDefault();
     let newEducation = {
       school: '',
       major: '',
       date: ''
     }
+
     setInformation((prevData) => ({
       ...prevData,
       education: [...prevData.education, newEducation]
     }))
   }
 
-  function addNewExperience() {
+  function addNewExperience(e) {
+    e.preventDefault();
     let newExperience = {
       company: '',
       position: '',
@@ -68,7 +71,8 @@ function App() {
     }))
   }
 
-  function removeEducation() {
+  function removeEducation(e) {
+    e.preventDefault();
     if (information.education.length > 1) {
       setInformation((prevData) => ({
         ...prevData,
@@ -85,7 +89,8 @@ function App() {
     
   }
   
-  function removeExperience() {
+  function removeExperience(e) {
+    e.preventDefault();
     if (information.experience.length > 1) {
       setInformation((prevData) => ({
         ...prevData,
